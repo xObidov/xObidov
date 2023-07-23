@@ -1,72 +1,196 @@
-.calc{
-    margin: 50px auto;
-    width: 300px;
-    height: 500px;
-    /* border: 1 px solid #000; */
-    border-radius: 20px;
-    background: #000;
-    color: #fff;
-    font-family: Arial;
-    padding: 18px;
-    box-shadow: 4px 4px 4px #4f4f44;
-}
+/* red-hat-display-regular - latin */
+@font-face {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/red-hat-display-v14-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/red-hat-display-v14-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* red-hat-display-500 - latin */
+  @font-face {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+         url('../fonts/red-hat-display-v14-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/red-hat-display-v14-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* red-hat-display-700 - latin */
+  @font-face {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/red-hat-display-v14-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/red-hat-display-v14-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* red-hat-display-900italic - latin */
+  @font-face {
+    font-family: 'Red Hat Display';
+    font-style: italic;
+    font-weight: 900;
+    src: local(''),
+         url('../fonts/red-hat-display-v14-latin-900italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/red-hat-display-v14-latin-900italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
 
-.calc-screen{
-    height: 125px;
-    padding: 10px;
-    display: grid;
-    justify-items: end;
-    align-items: end;
-    margin-bottom: 20px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+    top: 0;
+}
+ul,
+ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: "Red Hat Display", Arial, sans-serif;
+    font-weight: 400;
+    line-height: 19px;
+    font-size: 16px;
+    color: #1A202C;
+    background-color: rgb(207, 219, 248);
+    background-image: url(../img/bg-img.png);
+    background-size: contain;
+    background-repeat: no-repeat;
     
 }
-.calc-screen p{
-    text-align: right;
-    font-size: 4rem;
-    margin: 0;
-}
-
-.buttons{
-    display: grid;
-    grid-template-areas:
-    "as plus-minus precent division" 
-    "seven eigth nine multi"
-    "four five six minus"
-    "one two three plus"
-    "zero zero dot equal";
-    grid-gap: 7px;
-    justify-items: center;
-
-}
-
-.btn{
-    width: 60px;
-    min-height: 60px;
-    background: #333;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 60px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    user-select: none;
-}
-
-.btn.zero{
-    grid-area: zero;
+.container{
     width: 100%;
-    border-radius: 34px;
+    max-width:1440px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}  
+/* ----------------------MAIN--------------------------- */
+.main{
+    padding-bottom: 10px;
+    padding-top: 30px;
 }
+.main-container {
+    margin-top: 170px;
+    width: 450px;
+    height: 626px;
+    background-color:#ffff;
+    border-radius: 20px;
+    margin-bottom: 101px;
+}
+.site-div{
+}
+.main-img{
+}
+.img{
+    margin-left: -52px;
+    margin-top: -100px;
+}
+.site-text{
+    text-align: center;
+    margin-top: 29px;
+}
+.site-heading{
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 37px;
+    color: #1F2E55;
+}
+.site-info{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #717FA6;
+}
+.site-annual{
+    width: 354px;
+    height: 98px;
+    margin-top: 20px;
+    background-color: rgba(247, 249, 255, 1);
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    
+}
+.annual-text{
+    margin-right: 50px;
+}
+.annual-title{
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 21px;
+    color: #1F2E55;
+}
+.annual-info{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    padding-top: 6px;
+    color: #717FA6;
+}
+.annual-link{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration-line: underline;
+    color: #382AE1;
+}
+.annual-link:active{
+    opacity: 0.8;
+}
+.site-btn{
 
-.btn:hover{
-    filter: brightness(120%);
+}
+.btn{
+    border: none;
+    margin-top: 3.2rem;
+    background: #382AE1;
+    box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+    border-radius: 11px;
+    width: 354px;
+    height: 50px;
+    color: #ffff;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 20px;
 }
 .btn:active{
-    filter: brightness(90%);
+    opacity: 0.8;
 }
-
-.btn.bg-grey{
-    background: #a6a6aa;
+.footer-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.2rem;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 20px;
+    color: #717FA6;
 }
-.btn.bg-orange{
-    background: #ff9501;
+.footer-link:active{
+    color:rgba(31, 46, 85, 1);
+}
+/* ----------------------------MEDIA-------------------------- */
+@media(max-width:489px){
+    .main-container{
+        width: 327px;
+    }
+    .img{
+        width: 327px;
+    }
+    .site-annual{
+        width: 279px;
+        margin-left: -25px;
+    }
+    .btn{
+        width: 279px;
+        margin-left: -25px;
+    }
 }
